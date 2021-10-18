@@ -20,6 +20,7 @@ public class Pileta1 {
 		Socio socio2 = new Socio(2, "Anibal", "Elisii");
 		socio2.ingresarCL2();
 		System.out.println(socio2.getEstado());
+		
 	}
 }
 
@@ -34,7 +35,7 @@ class Socio {
 		this.nroSocio = nroSocio;
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.producto = new Producto(null, nroSocio);
+		this.producto = new Producto(nombre, 0);
 	}
 
 	public void ingresarCL1() {
