@@ -1,10 +1,12 @@
 package Paradigma2;
 
-
 public class Pileta1 {
 
 	public static void main(String[] args) {
- Socio socio1 = new Socio(1, "Ignacio", "elisii");
+		
+		System.out.println("---Socio1---");
+
+		Socio socio1 = new Socio(1, "Ignacio", "elisii");
 		socio1.ingresarCL1();
 		System.out.println(socio1.getEstado());
 		socio1.Eliminaractividad();
@@ -12,9 +14,14 @@ public class Pileta1 {
 		socio1.ingresarCL3();
 		System.out.println(socio1.getEstado());
 		socio1.getProducto().Antiparras();
-	Socio socio2 = new Socio(2, "Anibal", "Elisii");
-		//socio2.getEstado();
+
+		System.out.println("---Socio2---");
+
+		Socio socio2 = new Socio(2, "Anibal", "Elisii");
+		socio2.ingresarCL2();
+		System.out.println(socio2.getEstado());
 	}
+}
 
 class Socio {
 	private int nroSocio;
@@ -51,7 +58,8 @@ class Socio {
 	}
 
 	public String getEstado() {
-		return nroSocio + " " + " " + actividad + " " + " " + nombre + " " + apellido + " Producto comprado "+ producto;
+		return nroSocio + " " + " " + actividad + " " + " " + nombre + " " + apellido + " Producto comprado "
+				+ producto;
 	}
 
 	class Producto {
@@ -67,13 +75,12 @@ class Socio {
 			return nombre + " " + " " + precio;
 
 		}
-             public void  Antiparras() {
-            	 nombre = "Antiparras";
-            	 precio =  1000;
-	  
-}
-		
+
+		public void Antiparras() {
+			nombre = "Antiparras";
+			precio = 1000;
+
 		}
+
+	}
 }
-}
-	
