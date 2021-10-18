@@ -1,33 +1,33 @@
 package Paradigma2;
 
+
 public class Pileta1 {
 
 	public static void main(String[] args) {
-
-		Socio socio1 = new Socio(1, "Ignacio", "Elisii");
+ Socio socio1 = new Socio(1, "Ignacio", "elisii");
 		socio1.ingresarCL1();
 		System.out.println(socio1.getEstado());
 		socio1.Eliminaractividad();
 		System.out.println(socio1.getEstado());
 		socio1.ingresarCL3();
 		System.out.println(socio1.getEstado());
-         socio1.getEstado();
+		socio1.getProducto().Antiparras();
+	Socio socio2 = new Socio(2, "Anibal", "Elisii");
+		//socio2.getEstado();
 	}
-
-}
 
 class Socio {
 	private int nroSocio;
 	private String nombre;
 	private String apellido;
 	private String actividad;
-	Producto producto; 
+	private Producto producto;
 
 	public Socio(int nroSocio, String nombre, String apellido) {
 		this.nroSocio = nroSocio;
 		this.nombre = nombre;
 		this.apellido = apellido;
-
+		this.producto = new Producto(null, nroSocio);
 	}
 
 	public void ingresarCL1() {
@@ -45,35 +45,35 @@ class Socio {
 	public void Eliminaractividad() {
 		actividad = "Sin actividad actualmente";
 	}
-	public   Producto   getProducto() {
+
+	public Producto getProducto() {
 		return producto;
 	}
 
 	public String getEstado() {
-		return nroSocio + " " + " " + actividad + " " + " " + nombre + " " + apellido +" Producto comprado " + producto;
+		return nroSocio + " " + " " + actividad + " " + " " + nombre + " " + apellido + " Producto comprado "+ producto;
 	}
 
-class Producto {
-	private String nombre;
-	private int precio;
+	class Producto {
+		private String nombre;
+		private int precio;
 
-	public Producto(String nombre, int precio) {
-		this.nombre = nombre;
-		this.precio = precio;	
-	} 
-	public String getEstado() {
-		return nombre + " "+ " "+ precio; 
+		public Producto(String nombre, int precio) {
+			this.nombre = nombre;
+			this.precio = precio;
+		}
+
+		public String getEstado() {
+			return nombre + " " + " " + precio;
+
+		}
+             public void  Antiparras() {
+            	 nombre = "Antiparras";
+            	 precio =  1000;
+	  
+}
 		
-	}
- 
-       
-       
-       public void ingresarAntiparra() {
-            nombre = "Antiparra";
-            precio = 1000;
-       }
-       
-       
-       
+		}
 }
 }
+	
